@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  background-image: url("/img/bg-main.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body {
+  height: 100dvh;
+
+  position: relative;
+}
+
+.modal-background {
+  position: fixed;
+  z-index: 100;
+
+  background-color: #000000a3;
+
+  width: 100%;
+  height: 100%;
+
+  display: none;
+  opacity: 0;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-container {
+  padding: 1.25rem;
+
+  width: 25ch;
+
+  background-color: whitesmoke;
+  border: 1px solid black;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-heading {
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
+
+  font-size: 1.35rem;
+
+  border-bottom: 1px solid black;
+}
+
+.modal-message {
+  margin-bottom: 1rem;
+}
+
+.modal-message p {
+  margin-bottom: 0.5rem;
+}
+
+.modal-message ol {
+  padding-inline: 1.5rem;
+}
+
+.modal-message li {
+  margin-block: 0.35rem;
+  font-size: 0.9rem;
+}
+
+.modal-controls > button {
+  float: right;
+
+  padding: 0.35rem 0.75rem;
+
+  background-color: whitesmoke;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+main#main-content {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.main-logo {
+  width: 300px;
+  height: 300px;
+
+  animation: heartbeat 1s infinite;
+}
+
+#message_form {
+  display: none;
+  opacity: 0;
+
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.form-input {
+  padding: 1rem 1.25rem;
+
+  background-color: whitesmoke;
+  border: 1px solid black;
+  border-radius: 20px;
+
+  color: black;
+}
+
+textarea.form-input {
+  resize: none;
+}
+
+.form-controls {
+  margin-top: 0.5rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-input[type="submit"] {
+  padding: 0.75rem 1.25rem;
+
+  font-weight: 400;
+}
+
+.form-navigation {
+  padding: 0.25rem 0.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: whitesmoke;
+  border: 1px solid black;
+  border-radius: 5px;
+
+  color: black;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (min-width: 425px) {
+  textarea.form-input {
+    width: 45ch;
+  }
+  .modal-container {
+    width: 37.5ch;
+  }
+}
+
+@media (min-width: 768px) {
+  textarea.form-input {
+    width: 60ch;
+  }
+  .modal-container {
+    width: 50ch;
+  }
+}
