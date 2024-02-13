@@ -7,7 +7,7 @@ const form = {
   view_response: document.getElementById("_view_responses"),
 }
 
-const socket = io("https://anonymously-yours-ijkz.onrender.com")
+const socket = io("https://anonymously-yours-server.netlify.app")
 socket.on("connect", () => console.log("Connection Successfully Established."))
 
 const query = new Proxy(new URLSearchParams(window.location.search), {

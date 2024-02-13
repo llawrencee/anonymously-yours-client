@@ -1,7 +1,7 @@
 const message_container = document.querySelector(".message-container")
 const post_response = document.getElementById("_post_response")
 
-const socket = io("https://anonymously-yours-ijkz.onrender.com")
+const socket = io("https://anonymously-yours-server.netlify.app")
 socket.on("connect", () => console.log("Connection Successfully Established."))
 
 setInterval(() => {
